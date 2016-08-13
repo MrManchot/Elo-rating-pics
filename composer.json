@@ -1,0 +1,8 @@
+{
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "chovanec/elo-rating": "dev-master",
+    "symfony/var-dumper": "^3.1"
+  }
+}

@@ -1,0 +1,4 @@
+vendor
+/pics/*
+!pics/index.php
+scores.json
