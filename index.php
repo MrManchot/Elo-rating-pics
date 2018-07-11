@@ -3,6 +3,9 @@
 require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/class/RatingPics.php';
 
+// Gloups score fonctionne pas
+// Si X vote & inferieur à => On supprime
+
 $rp = new RatingPics('pics/');
 if (isset($_GET['win']) && isset($_GET['loose'])) {
     $rp->play($_GET['win'], $_GET['loose']);
