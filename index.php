@@ -1,14 +1,12 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/class/RatingPics.php';
-
-// Gloups score fonctionne pas
-// Si X vote & inferieur à => On supprime
+require __DIR__ . '/class/Rating.php';
 
 $rp = new RatingPics('pics/');
 if (isset($_GET['win']) && isset($_GET['loose'])) {
     $rp->play($_GET['win'], $_GET['loose']);
+    header('Location: index.php');
 }
 $pics = $rp->picKPics();
 
@@ -18,8 +16,6 @@ $pics = $rp->picKPics();
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         html {
@@ -28,14 +24,15 @@ $pics = $rp->picKPics();
         body {
             height: 100%;
             margin: 0;
+            text-align: center;
         }
         a {
-            display: block;
+            display: inline-block;
             width: 50%;
-            float: left;
             min-height: 100%;
             background: no-repeat 50% 50%;
             background-size: contain;
+            max-width:512px;
         }
     </style>
 </head>

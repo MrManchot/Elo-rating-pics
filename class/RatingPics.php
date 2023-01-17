@@ -55,12 +55,11 @@ class RatingPics
         $win_score = isset($this->scores[$win]) ? $this->scores[$win] : self::DEFAULT_SCORE;
         $loose_score = isset($this->scores[$loose]) ? $this->scores[$loose] : self::DEFAULT_SCORE;
 
-        $rating = new Rating\Rating($win_score, $loose_score, 1, 0);
+        $rating = new Rating($win_score, $loose_score, 1, 0);
         $results = $rating->getNewRatings();
         $this->scores[$win] = $results['a'];
         $this->scores[$loose] = $results['b'];
 
         $this->writeScores();
     }
-
 }
