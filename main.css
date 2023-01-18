@@ -7,6 +7,9 @@ body {
   margin: 0;
   text-align: center;
 }
+#rate {
+  padding-top: 30px;
+}
 #rate a {
   display: inline-block;
   width: 50%;
@@ -14,6 +17,7 @@ body {
   background: no-repeat 50% 50%;
   background-size: contain;
   width: 576px;
+  height: 576px;
 }
 #rank {
   text-align: center;
