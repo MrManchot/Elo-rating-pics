@@ -1,0 +1,45 @@
+html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  height: 100%;
+  margin: 0;
+  text-align: center;
+}
+#rate a {
+  display: inline-block;
+  width: 50%;
+  min-height: 100%;
+  background: no-repeat 50% 50%;
+  background-size: contain;
+  width: 576px;
+}
+#rank {
+  text-align: center;
+}
+#rank > div {
+  width: 576px;
+  height: 576px;
+  display: inline-block;
+  text-align: left;
+  padding: 30px;
+  box-sizing: border-box;
+}
+#rank > div .inside {
+  visibility: hidden;
+}
+#rank > div:hover .inside {
+  visibility: visible;
+}
+#rank > div a {
+  font-size: 50px;
+  text-decoration: none;
+}
+#rank > div span {
+  float: right;
+  font-weight: bold;
+  font-size: 50px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

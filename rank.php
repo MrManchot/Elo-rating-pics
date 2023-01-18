@@ -12,6 +12,16 @@ if (isset($_GET['delete'])) {
     header('Location: rank.php#end');
 }
 
+$i = 1;
+$html = '';
+foreach ($rp->scores as $pic => $score) {
+    $html .='<div style="background-image:url(' . $rp->dir . $pic . ')">
+        <a href="?delete=' . $pic . '" class="inside">🗑️</a>
+        <span class="inside">#' . $i . '</span>
+    </div>';
+    $i++;
+}
+
 ?>
 <!doctype html>
 <html>
@@ -19,38 +29,11 @@ if (isset($_GET['delete'])) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            text-align: center;
-            margin: 0;
-        }
-
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            max-height: 800px;
-            height: auto;
-        }
-    </style>
+    <title>🥇 Ranking 🥇</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
-    <?php
-    echo '<h1>' . count($rp->scores) . ' elements</h1>';
-    $i = 1;
-    foreach ($rp->scores as $pic => $score) {
-        echo '<h2>#' . $i . ' => ' . round($score) . '</h2>';
-        echo '<a href="?delete=' . $pic . '">DELETE</a>';
-        echo '<img src="' . $rp->dir . $pic . '">';
-        echo '<hr>';
-        $i++;
-    }
-    echo '<div id="end"></div>';
-    ?>
-</body>
+<body><div id="rank"><?=$html?></div></body>
 
 </html>
