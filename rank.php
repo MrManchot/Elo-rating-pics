@@ -15,7 +15,7 @@ if (isset($_GET['delete'])) {
 $i = 1;
 $html = '';
 foreach ($rp->scores as $pic => $score) {
-    $html .='<div style="background-image:url(' . $rp->dir . $pic . ')">
+    $html .='<div style="background-image:url(\'' . $rp->dir . $pic . '\')">
         <a href="?delete=' . $pic . '" class="inside">🗑️</a>
         <span class="inside">#' . $i . '</span>
     </div>';

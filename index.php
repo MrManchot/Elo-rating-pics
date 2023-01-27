@@ -36,8 +36,8 @@ $pics = $rp->picKPics();
 
 <body>
     <div id="rate">
-        <a href="?win=<?= base64_encode($pics[0]) ?>&loose=<?= base64_encode($pics[1]) ?>" style="background-image:url(<?= $pics[0] ?>);"></a>
-        <a href="?win=<?= base64_encode($pics[1]) ?>&loose=<?= base64_encode($pics[0]) ?>" style="background-image:url(<?= $pics[1] ?>);"></a>
+        <a href="?win=<?= base64_encode($pics[0]) ?>&loose=<?= base64_encode($pics[1]) ?>" style="background-image:url('<?= $pics[0] ?>');"></a>
+        <a href="?win=<?= base64_encode($pics[1]) ?>&loose=<?= base64_encode($pics[0]) ?>" style="background-image:url('<?= $pics[1] ?>');"></a>
     </div>
 </body>
 

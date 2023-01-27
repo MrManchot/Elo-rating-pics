@@ -20,6 +20,12 @@ class RatingPics
         if (!count($files))
             die('No pics found');
 
+        foreach ($files as &$file) {
+            if (strpos($file, ' ') !== false) {
+                rename(__DIR__ . '/../'. $file, __DIR__ . '/../'. str_replace(' ', '_', $file));
+            }
+        }
+
         $max_index = count($files) - 1;
         $first = rand(0, $max_index);
 
